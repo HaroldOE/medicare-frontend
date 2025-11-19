@@ -1,6 +1,10 @@
+import { useState } from "react";
+
+
+
 import { Bell, Calendar, Phone, Heart, Settings, FileText } from "lucide-react";
 
-export default function PatientDashboard() {
+function PatientDashboard() {
   return (
     <div className="flex-1 bg-gray-50 p-10">
       {/* Header */}
@@ -102,3 +106,4 @@ export default function PatientDashboard() {
     </div>
   );
 }
+export default  PatientDashboard;
