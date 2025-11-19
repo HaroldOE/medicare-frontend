@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CreateAccount from "./pages/CreateAccount";
 import Index from "./pages/Index";
-import PatientDashboard from "./pages/admin/patientDashboard";
-import SideBars from "./layout/sidebars";
+import PatientDashboard from "./pages/admin/patientDashboard"; // FIXED path
+import SideBars from "./layout/SideBars"; // make sure this matches your filename
 
 const AppRouter = () => {
   return (

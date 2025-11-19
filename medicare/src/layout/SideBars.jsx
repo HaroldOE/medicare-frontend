@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AlertCircle, FileText, Heart, Calendar, Phone, BellRing, Folder, User, Settings, LogOut } from "lucide-react";
 
 const menuItems = [
   //   { icon: Home, label: "Dashboard", active: true },
