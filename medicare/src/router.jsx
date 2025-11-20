@@ -1,7 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 
-import Index from "./pages/Index";
-
 import RoleSelection from "./pages/RoleSelection";
 import { default as DocCreateAccount } from "./pages/doctors/CreateAccount";
 import DocPasswordReset from "./pages/doctors/DocPasswordReset";
