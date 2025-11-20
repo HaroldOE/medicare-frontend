@@ -28,7 +28,7 @@ export default function DocCreateAccount() {
           </h1>
 
           <p className="text-gray-500 mt-1 text-center">
-            Join our healthcare platform
+            Join our team of Doctors
           </p>
         </div>
 
@@ -126,7 +126,7 @@ export default function DocCreateAccount() {
       {/* RIGHT SIDE IMAGE */}
       <div className="w-full md:w-1/2 flex justify-center mt-12 md:mt-0">
         <img
-          src="/img/creataccount.jpg"
+          src="/img/doctorimg.jpg"
           alt="Healthcare"
           className="w-[85%] md:w-[90%] rounded-3xl object-cover"
         />
