@@ -29,10 +29,11 @@ export default function RoleSelection() {
             consultations.
           </p>
 
-          <Link to={"/patlogin"} className="w-full">
-            <button className="w-full bg-blue-700 hover:bg-blue-800 text-white text-lg py-6 rounded-2xl font-semibold transition">
-              Continue →
-            </button>
+          <Link
+            to={"/patlogin"}
+            className="w-full bg-blue-700 hover:bg-blue-800 text-white text-lg py-6 rounded-2xl font-semibold transition"
+          >
+            Continue →
           </Link>
         </div>
 
@@ -48,19 +49,22 @@ export default function RoleSelection() {
             Manage patients, consultations, and access medical analytics.
           </p>
 
-          <Link to={"/doclogin"} className="w-full">
-            <button className="w-full bg-teal-500 hover:bg-teal-600 text-white text-lg py-6 rounded-2xl font-semibold transition">
-              Continue →
-            </button>
+          <Link
+            to={"/doclogin"}
+            className="w-full bg-teal-500 hover:bg-teal-600 text-white text-lg py-6 rounded-2xl font-semibold transition"
+          >
+            Continue →
           </Link>
         </div>
       </div>
 
       {/* Back to Home */}
-      <Link to={"/"}>
-        <button className="border-2 border-gray-400 text-black hover:bg-gray-50 text-base px-8 py-4 rounded-full font-semibold transition bg-transparent">
-          Back to Home
-        </button>
+
+      <Link
+        to={"/"}
+        className="border-2 border-gray-400 text-black hover:bg-gray-50 text-base px-8 py-4 rounded-full font-semibold transition bg-transparent"
+      >
+        Back to Home
       </Link>
     </div>
   );
