@@ -1,10 +1,9 @@
 import { useState } from "react";
-
-
-
 import { Bell, Calendar, Phone, Heart, Settings, FileText } from "lucide-react";
 
 function PatientDashboard() {
+  const [showEmergency, setShowEmergency] = useState(true); // Example useState
+
   return (
     <div className="flex-1 bg-gray-50 p-10">
       {/* Header */}
@@ -14,24 +13,36 @@ function PatientDashboard() {
       </div>
 
       {/* Emergency Banner */}
-      <div className="bg-red-600 text-white rounded-3xl p-10 mb-10 flex items-center justify-between shadow-lg">
-        <div className="flex items-center gap-6">
-          <div className="bg-red-700 p-4 rounded-full">
-            <Bell className="w-10 h-10" />
+      {showEmergency && (
+        <div className="bg-red-600 text-white rounded-3xl p-10 mb-10 flex items-center justify-between shadow-lg">
+          <div className="flex items-center gap-6">
+            <div className="bg-red-700 p-4 rounded-full">
+              <Bell className="w-10 h-10" />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold">Need Emergency Care?</h3>
+              <p className="text-red-100">Get immediate assistance from our doctors</p>
+            </div>
           </div>
-          <div>
-            <h3 className="text-2xl font-bold">Need Emergency Care?</h3>
-            <p className="text-red-100">Get immediate assistance from our doctors</p>
+          <div className="flex gap-4">
+            <button
+              className="bg-white text-red-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition"
+              onClick={() => alert("Calling emergency...")}
+            >
+              Call Now
+            </button>
+            <button
+              className="bg-gray-200 text-red-600 px-6 py-4 rounded-xl font-bold text-lg hover:bg-gray-300 transition"
+              onClick={() => setShowEmergency(false)}
+            >
+              Dismiss
+            </button>
           </div>
         </div>
-        <button className="bg-white text-red-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition">
-          Call Now
-        </button>
-      </div>
+      )}
 
       {/* Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-        {/* Row 1 */}
         <div className="bg-red-600 text-white rounded-3xl p-8 shadow-md">
           <Bell className="w-12 h-12 mb-4" />
           <h3 className="text-2xl font-bold">Emergency Consultation</h3>
@@ -50,7 +61,6 @@ function PatientDashboard() {
           <p className="mt-3 opacity-90">View health records</p>
         </div>
 
-        {/* Row 2 */}
         <div className="bg-amber-500 text-white rounded-3xl p-8 shadow-md">
           <Calendar className="w-12 h-12 mb-4" />
           <h3 className="text-2xl font-bold">Appointments</h3>
@@ -74,36 +84,42 @@ function PatientDashboard() {
       <div>
         <h2 className="text-3xl font-bold mb-6">Recent Activity</h2>
         <div className="bg-white rounded-3xl shadow-md overflow-hidden">
-          <div className="p-6 border-b border-gray-200">
-            <div className="flex justify-between">
-              <div>
-                <p className="font-semibold text-lg">Prescription Refilled</p>
-                <p className="text-gray-600">Medication: Aspirin 100mg</p>
+          {[
+            {
+              title: "Prescription Refilled",
+              detail: "Medication: Aspirin 100mg",
+              time: "2 hours ago",
+            },
+            {
+              title: "Appointment Scheduled",
+              detail: "Dr. Smith - General Checkup",
+              time: "1 day ago",
+            },
+            {
+              title: "Medical Record Updated",
+              detail: "Lab results added",
+              time: "3 days ago",
+            },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className={`p-6 border-b border-gray-200 ${
+                i === 2 ? "" : ""
+              }`}
+            >
+              <div className="flex justify-between">
+                <div>
+                  <p className="font-semibold text-lg">{item.title}</p>
+                  <p className="text-gray-600">{item.detail}</p>
+                </div>
+                <span className="text-gray-500">{item.time}</span>
               </div>
-              <span className="text-gray-500">2 hours ago</span>
             </div>
-          </div>
-          <div className="p-6 border-b border-gray-200">
-            <div className="flex justify-between">
-              <div>
-                <p className="font-semibold text-lg">Appointment Scheduled</p>
-                <p className="text-gray-600">Dr. Smith - General Checkup</p>
-              </div>
-              <span className="text-gray-500">1 day ago</span>
-            </div>
-          </div>
-          <div className="p-6">
-            <div className="flex justify-between">
-              <div>
-                <p className="font-semibold text-lg">Medical Record Updated</p>
-                <p className="text-gray-600">Lab results added</p>
-              </div>
-              <span className="text-gray-500">3 days ago</span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
   );
 }
-export default  PatientDashboard;
+
+export default PatientDashboard;
