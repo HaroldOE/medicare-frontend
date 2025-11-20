@@ -23,7 +23,7 @@ function DocLogin() {
             Login
           </h1>
           <p className="text-gray-500 mt-1 text-center">
-            Welcome back to your account
+            Welcome back to your Doctor
           </p>
         </div>
 

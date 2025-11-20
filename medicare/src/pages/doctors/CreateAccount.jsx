@@ -28,7 +28,7 @@ export default function DocCreateAccount() {
           </h1>
 
           <p className="text-gray-500 mt-1 text-center">
-            Join our healthcare platform
+            Join our team of Doctors
           </p>
         </div>
 
