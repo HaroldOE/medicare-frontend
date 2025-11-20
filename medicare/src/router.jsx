@@ -9,6 +9,11 @@ import PatCreateAccount from "./pages/patients/CreateAccount";
 import PatLogin from "./pages/patients/Login";
 import PatPasswordReset from "./pages/patients/PatPasswordReset";
 import PatVerifyPassword from "./pages/patients/PatVerifyPassword";
+import CreateAccount from "./pages/doctors/CreateAccount";
+import Index from "./pages/Index";
+import PatientDashboard from "./Components/PatientDashboard"; // FIXED path
+import SideBars from "./Components/SideBars"; // make sure this matches your filename
+import AdminLayout from "./pages/admin/AdminLayout";
 
 const AppRouter = () => {
   return (
