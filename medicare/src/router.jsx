@@ -31,6 +31,9 @@ const AppRouter = () => {
         <Route path="/patcreate" element={<PatCreateAccount />} />
         <Route path="/patpassreset" element={<PatPasswordReset />} />
         <Route path="/patverifypass" element={<PatVerifyPassword />} />
+        <Route path="/patientdashboars" element={<PatientDashboard />} />
+        <Route path="/sidebars" element={<SideBars />} />
+        <Route path="/user-dashboard" element={<AdminLayout />} />
       </Routes>
     </BrowserRouter>
   );
