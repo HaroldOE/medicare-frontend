@@ -1,20 +1,36 @@
 import { BrowserRouter, Route, Routes } from "react-router";
-import CreateAccount from "./pages/CreateAccount";
+
+import RoleSelection from "./pages/RoleSelection";
+import { default as DocCreateAccount } from "./pages/doctors/CreateAccount";
+import DocPasswordReset from "./pages/doctors/DocPasswordReset";
+import DocVerifyPassword from "./pages/doctors/DocVerifyPassword";
+import { default as DocLogin } from "./pages/doctors/Login";
+import PatCreateAccount from "./pages/patients/CreateAccount";
+import PatLogin from "./pages/patients/Login";
+import PatPasswordReset from "./pages/patients/PatPasswordReset";
+import PatVerifyPassword from "./pages/patients/PatVerifyPassword";
+import CreateAccount from "./pages/doctors/CreateAccount";
 import Index from "./pages/Index";
-import PatientDashboard from "./pages/admin/patientDashboard"; // FIXED path
+import PatientDashboard from "./Components/PatientDashboard"; // FIXED path
 import SideBars from "./Components/SideBars"; // make sure this matches your filename
-import AdminLayout from "./Components/AdminLayout";
+import AdminLayout from "./pages/admin/AdminLayout";
 
 const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/createaccount" element={<CreateAccount />} />
-        <Route path="/sidebars" element={<SideBars />} />
-        <Route path="/patientdashboard" element={<PatientDashboard />} />
-        <Route path="/AdminLayout" element={<AdminLayout />} />
+        <Route path="/" element={<RoleSelection />} />
 
+        {/* Doctor Login Route */}
+        <Route path="/doclogin" element={<DocLogin />} />
+        <Route path="/doccreate" element={<DocCreateAccount />} />
+        <Route path="/docpassreset" element={<DocPasswordReset />} />
+        <Route path="/docverifypass" element={<DocVerifyPassword />} />
+        {/* Patient Login Route */}
+        <Route path="/patlogin" element={<PatLogin />} />
+        <Route path="/patcreate" element={<PatCreateAccount />} />
+        <Route path="/patpassreset" element={<PatPasswordReset />} />
+        <Route path="/patverifypass" element={<PatVerifyPassword />} />
       </Routes>
     </BrowserRouter>
   );

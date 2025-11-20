@@ -1,5 +1,5 @@
-import SideBars from "./SideBars";
-import PatientDashboard from "../pages/admin/patientDashboard";
+import SideBars from "../../Components/SideBars";
+import PatientDashboard from "../../Components/PatientDashboard";
 
 export default function AdminLayout() {
   return (
