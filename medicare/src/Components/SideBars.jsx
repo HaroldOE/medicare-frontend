@@ -10,40 +10,47 @@ import {
   User,
   Settings,
   LogOut,
+  HomeIcon,
+  
 } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router";
 
 const menuItems = [
+  { icon: HomeIcon, label: "Dashboard", path: "/dashboard"},
   { icon: AlertCircle, label: "Emergency", path: "/emergency" },
   { icon: FileText, label: "Prescriptions", path: "/prescriptions" },
   { icon: Heart, label: "Medical History", path: "/medical-history" },
   { icon: Calendar, label: "Appointments", path: "/appointments" },
   { icon: Phone, label: "Emergency Contacts", path: "/emergency-contacts" },
-  { icon: BellRing, label: "Notifications", path: "/notifications" },
-  { icon: Folder, label: "Documentation", path: "/documentation" },
-  { icon: User, label: "Profile", path: "/profile" },
+  
+  
 ];
 
 function SideBars() {
   const [activeIndex, setActiveIndex] = useState(0); // track active menu
 
   return (
-    <div className="w-80 bg-[#1e40af] text-white min-h-screen flex flex-col">
+    <div className="w-80 bg-[#1e40af] text-white min-h-screen flex flex-col ">
       {/* Logo */}
-      <div className="p-8">
-        <h1 className="text-3xl font-bold">HealthCare</h1>
-        <p className="text-blue-200 text-sm mt-1">Patient Portal</p>
-      </div>
+      {/* Logo - perfectly left-aligned */}
+<div className="px-8 pt-8 pb-12">
+  <h1 className="text-4xl font-extrabold text-white leading-none text-left">
+    HealthCare
+  </h1>
+  <p className="text-blue-200 text-sm mt-2 text-left">
+    Patient Portal
+  </p>
+</div>
 
       {/* Menu */}
       <nav className="flex-1 px-6">
-        <p className="text-blue-300 text-xs font-semibold uppercase tracking-wider mb-3">
+        <p className="text-blue-300 text-xs font-semibold uppercase tracking-wider mb-3 text-left">
           Main Menu
         </p>
         {menuItems.map((item, i) => {
           const Icon = item.icon;
           return (
-            <NavLink
+            <Link
               key={i}
               to={item.path}
               onClick={() => setActiveIndex(i)}
@@ -55,20 +62,37 @@ function SideBars() {
             >
               <Icon className="w-6 h-6" />
               <span className="text-base">{item.label}</span>
-            </NavLink>
+            </Link>
           );
         })}
 
-        <p className="text-blue-300 text-xs font-semibold uppercase tracking-wider mt-8 mb-3">
+        <p className="text-blue-300 text-xs font-semibold uppercase tracking-wider mt-8 mb-3 text-left">
           More
         </p>
-        <NavLink
-          to="/settings"
+        <Link
+          to={"/settings"}
           className="flex items-center gap-4 px-5 py-4 rounded-xl hover:bg-blue-700 transition-all"
         >
-          <Settings className="w-6 h-6" />
-          <span className="text-base">Settings</span>
-        </NavLink>
+          <BellRing className="w-6 h-6" />
+          <span className="text-base">Notifications</span>
+
+        </Link>
+
+        <Link
+        to= {"/documentation"}
+        className="flex items-center gap-4 px-5 py-4 rounded-xl hover:bg-blue-700 transition-all"
+        >
+        <Folder className="w-6 h-6" />
+          <span className="text-base">Documentation</span>
+          </Link>
+          
+          <Link
+        to= {"/profile"}
+        className="flex items-center gap-4 px-5 py-4 rounded-xl hover:bg-blue-700 transition-all"
+        >
+        <User className="w-6 h-6" />
+          <span className="text-base">profile</span>
+          </Link>
       </nav>
 
       {/* Logout */}

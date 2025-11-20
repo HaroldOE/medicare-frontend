@@ -2,8 +2,8 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import CreateAccount from "./pages/CreateAccount";
 import Index from "./pages/Index";
 import PatientDashboard from "./pages/admin/patientDashboard"; // FIXED path
-import SideBars from "./layout/SideBars"; // make sure this matches your filename
-import AdminLayout from "./layout/AdminLayout";
+import SideBars from "./Components/SideBars"; // make sure this matches your filename
+import AdminLayout from "./Components/AdminLayout";
 
 const AppRouter = () => {
   return (

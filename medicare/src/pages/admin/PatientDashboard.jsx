@@ -8,8 +8,8 @@ function PatientDashboard() {
     <div className="flex-1 bg-gray-50 p-10">
       {/* Header */}
       <div className="mb-10">
-        <h1 className="text-4xl font-bold text-gray-900">Welcome back, Patient</h1>
-        <p className="text-gray-600 text-lg mt-2">Manage your health effortlessly</p>
+        <h1 className="text-4xl font-bold text-gray-900 text-left">Welcome back, Patient</h1>
+        <p className="text-gray-600 text-lg mt-2 text-left">Manage your health effortlessly</p>
       </div>
 
       {/* Emergency Banner */}
@@ -45,20 +45,20 @@ function PatientDashboard() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         <div className="bg-red-600 text-white rounded-3xl p-8 shadow-md">
           <Bell className="w-12 h-12 mb-4" />
-          <h3 className="text-2xl font-bold">Emergency Consultation</h3>
-          <p className="mt-3 opacity-90">Urgent medical help</p>
+          <h3 className="text-2xl font-bold ">Emergency Consultation</h3>
+          <p className="mt-3 opacity-90 ">Urgent medical help</p>
         </div>
 
         <div className="bg-blue-600 text-white rounded-3xl p-8 shadow-md">
           <FileText className="w-12 h-12 mb-4" />
-          <h3 className="text-2xl font-bold">Prescription Refill</h3>
+          <h3 className="text-2xl font-bold ">Prescription Refill</h3>
           <p className="mt-3 opacity-90">Manage medications</p>
         </div>
 
         <div className="bg-green-600 text-white rounded-3xl p-8 shadow-md">
           <Heart className="w-12 h-12 mb-4" />
           <h3 className="text-2xl font-bold">Medical History</h3>
-          <p className="mt-3 opacity-90">View health records</p>
+          <p className="mt-3 opacity-90 ">View health records</p>
         </div>
 
         <div className="bg-amber-500 text-white rounded-3xl p-8 shadow-md">
@@ -83,7 +83,7 @@ function PatientDashboard() {
       {/* Recent Activity */}
       <div>
         <h2 className="text-3xl font-bold mb-6">Recent Activity</h2>
-        <div className="bg-white rounded-3xl shadow-md overflow-hidden">
+        <div className="bg-white rounded-3xl shadow-md overflow-hidden text-left">
           {[
             {
               title: "Prescription Refilled",
