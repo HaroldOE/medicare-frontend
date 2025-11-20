@@ -16,8 +16,6 @@ const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<Index />} /> */}
-
         <Route path="/" element={<RoleSelection />} />
 
         {/* Doctor Login Route */}
