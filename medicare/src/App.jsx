@@ -1,15 +1,13 @@
-import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import Login from "./pages/login";
+// import { Route, Routes } from "react-router-dom";
+// import RoleSelection from "./pages/RoleSelection";
+import AppRouter from "./router";
+import Index from "./pages/Index";
 
 function App() {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-    </div>
+    <>
+      <AppRouter />
+    </>
   );
 }
 

@@ -16,9 +16,9 @@ const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Index />} />
+        {/* <Route path="/" element={<Index />} /> */}
 
-        <Route path="/selectrole" element={<RoleSelection />} />
+        <Route path="/" element={<RoleSelection />} />
 
         {/* Doctor Login Route */}
         <Route path="/doclogin" element={<DocLogin />} />
