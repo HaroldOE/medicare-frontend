@@ -13,7 +13,7 @@ function DocLogin() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-white flex flex-col md:flex-row items-center justify-center p-6">
+    <div className="w-full bg-white flex flex-col md:flex-row items-center justify-center p-6">
       {/* LEFT SIDE FORM */}
       <div className="w-full md:w-1/2 flex flex-col items-start px-10">
         {/* Logo (Centered at the top) */}
@@ -23,7 +23,7 @@ function DocLogin() {
             Login
           </h1>
           <p className="text-gray-500 mt-1 text-center">
-            Welcome back to your account
+            Welcome back to your Doctor
           </p>
         </div>
 
@@ -86,9 +86,9 @@ function DocLogin() {
       {/* RIGHT SIDE IMAGE */}
       <div className="w-full md:w-1/2 flex justify-center mt-12 md:mt-0">
         <img
-          src="/img/creataccount.jpg"
+          src="/img/docimg.jpg"
           alt="Healthcare Login"
-          className="w-[85%] md:w-[90%] rounded-3xl object-cover"
+          className="w-[50%] md:w-[80%] rounded-3xl object-contain"
         />
       </div>
     </div>
