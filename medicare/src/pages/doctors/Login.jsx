@@ -86,7 +86,7 @@ function DocLogin() {
       {/* RIGHT SIDE IMAGE */}
       <div className="w-full md:w-1/2 flex justify-center mt-12 md:mt-0">
         <img
-          src="/img/creataccount.jpg"
+          src="/img/docimg.jpg"
           alt="Healthcare Login"
           className="w-[85%] md:w-[90%] rounded-3xl object-cover"
         />

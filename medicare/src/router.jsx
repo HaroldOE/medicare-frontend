@@ -1,7 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 
-import Index from "./pages/Index";
-
 import RoleSelection from "./pages/RoleSelection";
 import { default as DocCreateAccount } from "./pages/doctors/CreateAccount";
 import DocPasswordReset from "./pages/doctors/DocPasswordReset";
@@ -16,9 +14,9 @@ const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Index />} />
+        {/* <Route path="/" element={<Index />} /> */}
 
-        <Route path="/selectrole" element={<RoleSelection />} />
+        <Route path="/" element={<RoleSelection />} />
 
         {/* Doctor Login Route */}
         <Route path="/doclogin" element={<DocLogin />} />
