@@ -9,6 +9,9 @@ import PatCreateAccount from "./pages/patients/CreateAccount";
 import PatLogin from "./pages/patients/Login";
 import PatPasswordReset from "./pages/patients/PatPasswordReset";
 import PatVerifyPassword from "./pages/patients/PatVerifyPassword";
+import PatientDashboard from "./Components/PatientDashboard";
+import SideBars from "./Components/SideBars";
+import AdminLayout from "./pages/admin/AdminLayout";
 
 const AppRouter = () => {
   return (
@@ -26,7 +29,7 @@ const AppRouter = () => {
         <Route path="/patcreate" element={<PatCreateAccount />} />
         <Route path="/patpassreset" element={<PatPasswordReset />} />
         <Route path="/patverifypass" element={<PatVerifyPassword />} />
-        <Route path="/patientdashboars" element={<PatientDashboard />} />
+        <Route path="/patient-dashboard" element={<PatientDashboard />} />
         <Route path="/sidebars" element={<SideBars />} />
         <Route path="/user-dashboard" element={<AdminLayout />} />
       </Routes>
