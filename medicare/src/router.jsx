@@ -1,17 +1,20 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 
-import RoleSelection from "./pages/RoleSelection";
-import { default as DocCreateAccount } from "./pages/doctors/CreateAccount";
-import DocPasswordReset from "./pages/doctors/DocPasswordReset";
-import DocVerifyPassword from "./pages/doctors/DocVerifyPassword";
-import { default as DocLogin } from "./pages/doctors/Login";
-import PatCreateAccount from "./pages/patients/CreateAccount";
-import PatLogin from "./pages/patients/Login";
-import PatPasswordReset from "./pages/patients/PatPasswordReset";
-import PatVerifyPassword from "./pages/patients/PatVerifyPassword";
-import PatientDashboard from "./Components/PatientDashboard";
-import SideBars from "./Components/SideBars";
-import AdminLayout from "./pages/admin/AdminLayout";
+import RoleSelection from "./layout/RoleSelection";
+import { default as DocCreateAccount } from "./doctors/components/CreateAccount";
+import DocPasswordReset from "./doctors/components/DocPasswordReset";
+import DocVerifyPassword from "./doctors/components/DocVerifyPassword";
+import { default as DocLogin } from "./doctors/components/Login";
+import PatCreateAccount from "./layout/patients/CreateAccount";
+import PatLogin from "./layout/patients/Login";
+import PatPasswordReset from "./layout/patients/PatPasswordReset";
+import PatVerifyPassword from "./layout/patients/PatVerifyPassword";
+import CreateAccount from "./doctors/components/CreateAccount";
+import Index from "./layout/Index";
+import PatientDashboard from "./pages/PatientDashboard"; // FIXED path
+import SideBars from "./pages/sidebars"; // make sure this matches your filename
+import AdminLayout from "./layout/admin/AdminLayout";
+import DoctorsDashboard from "./doctors/layout/DoctorsDashboard";
 
 const AppRouter = () => {
   return (
@@ -24,6 +27,7 @@ const AppRouter = () => {
         <Route path="/doccreate" element={<DocCreateAccount />} />
         <Route path="/docpassreset" element={<DocPasswordReset />} />
         <Route path="/docverifypass" element={<DocVerifyPassword />} />
+        <Route path="doctorsdashboard" element={<DoctorsDashboard />} />
         {/* Patient Login Route */}
         <Route path="/patlogin" element={<PatLogin />} />
         <Route path="/patcreate" element={<PatCreateAccount />} />

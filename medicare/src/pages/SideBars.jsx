@@ -17,7 +17,7 @@ import { Link } from "react-router";
 
 const menuItems = [
   { icon: HomeIcon, label: "Dashboard", path: "/dashboard"},
-  { icon: AlertCircle, label: "Emergency", path: "/emergency" },
+  { icon: AlertCircle, label: "Consultation", path: "/consultation" },
   { icon: FileText, label: "Prescriptions", path: "/prescriptions" },
   { icon: Heart, label: "Medical History", path: "/medical-history" },
   { icon: Calendar, label: "Appointments", path: "/appointments" },
